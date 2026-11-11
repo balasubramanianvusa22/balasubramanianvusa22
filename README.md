@@ -22,7 +22,7 @@ Sources and staging are done for all eight tables. Next: tests, marts, and an or
 Moved ~50 reporting objects off a stale CRM replica in staged waves, each with a backup and rollback script. Retired ~26 unused objects based on 13 months of access history, and listed source defects for the data engineering fix.
 
 **Legacy dashboards rebuilt as tested dbt models** (Safe Streets USA)
-Rebuilt finance executive and upsell dashboard logic as dbt models with formula-level parity checks against production. The checks found a budget bug double-counting part of the year and duplicate billing on rescheduled work.
+Rebuilt finance executive and upsell dashboard logic as dbt models with formula-level parity checks against production, and redeployed the upsell dashboard on a new web BI layer. The checks found a budget bug double-counting part of the year, duplicate billing on rescheduled work, a hidden filter, "net" funding that was actually gross, and a billing table frozen since a pipeline failure.
 
 **Automated commissions engine** (Safe Streets USA)
 Turned a biweekly, ~8-hour manual commissions and payables process for four programs into minutes using Claude Code skills. Validated by rebuilding past paid periods to an exact match.
@@ -62,4 +62,4 @@ Claude Code writes most of the first draft. I own the business rules, the root c
 ## Education
 **M.S. Management Information Systems**, University of Arizona, Eller College of Management (2023)
 Eller Master's Excellence Award · 3× Dean's List
-**B.E. Electronics and Communication Engineering**, Anna University (2019)
+**B.E. Electronics and Communication Engineering**, Sri Sai Ram Institute of Technology, affiliated to Anna University (2019)
